@@ -39,7 +39,7 @@ class NaiveBayes:
           p = np.append(p,self.priors[i]*np.prod(pred[j:j+24][i::4]))
       for i in range(0,len(p),4):
         prediction = np.append(prediction,q[p[i:i+4].argmax()])     
-      return prediction
+      return prediction 
 
   def calculate_priors(self):
       # recall: prior is P(label=l_i)
